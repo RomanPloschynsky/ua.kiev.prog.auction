@@ -1,18 +1,19 @@
 import java.net.URL;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 abstract class Product {
-    int id;
-    String name;
-    enum type{};
-    enum subType{};
-    double price;
-    String description;
-    List<URL> photos = new ArrayList<URL>();
-    String country;
-    String city;
-    String address;
+    public int id;
+    public String name;
+    public enum type{};
+    public enum subType{};
+    public double price;
+    public String description;
+    public List<URL> photos = new ArrayList<URL>();
+    public String country;
+    public String city;
+    public String address;
 
     public Product(String name, double price, String description) {
         this.name = name;
@@ -89,6 +90,8 @@ abstract class Product {
         return String.format("Product{%d:{name:%s},{type:%s},{price:%s},{description:%s},{photos:%s},{country:%s},{city:%s},{address:%s}};",
                 id, name, type.values(), subType.values(), price, description, photos.toString(), country, city, address);
     }
+
+
 
 
 }
