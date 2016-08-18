@@ -1,16 +1,15 @@
 
 public class Realty extends Product {
 
-    enum type{ROOM,APARTMENT,HOUSE,TERRITORY};
-    enum subType{RENT,SALE};
+    enum Category{ROOM,APARTMENT,HOUSE,TERRITORY};
 
-    public Realty(String name, double price, String description) {
-        super(name, price, description);
+
+
+    public Realty(String name, double quantity, double price, String unit, String description, int ownerId) {
+        super(name, quantity, price, unit, description, ownerId);
     }
 
-
-
-
-
-
 }
+
+
+

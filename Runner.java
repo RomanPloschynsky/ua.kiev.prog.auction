@@ -1,45 +1,27 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Runner {
     public static void main(String[] args) {
 
-        List<Product> products = new ArrayList<Product>();
+        User root = new User(" rOo t ","root");
+        System.out.println(root);
+//        root.setPassword();
+//        System.out.println(root);
 
-        products.add(new Realty("name4",0.,"some description4"));
-        products.get(0).setId(11);
+        Product car1 = new Car("Citroen.C4", 1., 10000., "CT", "broken", root.getId());
+        System.out.println(car1);
 
-        products.add(new Realty("name1",0.,"some description2"));
-        products.get(1).setId(2);
+        Product house1 = new Realty("MarininskyPalace", 1., 10000000., "CT", "need renovation", root.getId());
+        System.out.println(house1);
 
-        products.add(new Realty("name2",0.,"some description3"));
-        products.get(2).setId(3);
+        Product car2 = new Car("Chrysler.C300", 1., 19000., "CT", "new", root.getId());
+        System.out.println(car1);
 
-        products.add(new Realty("name3",0.,"some description3"));
-        products.get(3).setId(13);
+        Auction auction1 = new Auction( (System.currentTimeMillis()+1000*60*60*24*21), car2, root.getId());
+        System.out.println(auction1);
 
-        for (Product product : products) {
-            System.out.println(product);
-        }
-        System.out.println();
+        
 
 
 
-        List list = new ArrayList();
-        list.add("id");
-        list.add("name");
-
-        //ObjectsSorting.getClassFields(products.get(0));
-
-        for(Product product : products) {
-            System.out.println(product);
-        }
-
-        ObjectsSorting.sortObjects(products, list);
-
-        for(Product product : products) {
-            System.out.println(product);
-        }
 
     }
 }

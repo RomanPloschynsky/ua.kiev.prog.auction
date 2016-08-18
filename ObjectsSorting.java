@@ -16,14 +16,30 @@ public class ObjectsSorting {
 
         Collections.reverse(list);
 
-        for (Object field : list) {
-            for (Field classField : classFields) {
-                if (field.equals(classField.getName())) {
-
-
-                }
-            }
-        }
+//        for (Object field : list) {
+//            for (Field classField : classFields) {
+//                if (field.equals(classField.getName())) {
+//
+//                    Collections.sort(objList, new Comparator() {
+//                        @Override
+//                        public int compare(o1, Object o2) {
+//                            return ;
+//                        }
+//
+//                        @Override
+//                        public Comparator reversed() {
+//                            return null;
+//                        }
+//
+//                        @Override
+//                        public int compare(Person a, Person b) {
+//                            return a.getName().compareTo(b.getName());
+//                        }
+//                    }
+//
+//                }
+//            }
+//        }
 
     }
 
